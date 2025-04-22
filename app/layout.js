@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import 'remixicon/fonts/remixicon.css';
 
 const fontPoppins = Poppins ({
   subsets: ["latin"],
@@ -18,9 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${fontPoppins.className}`}
+        className={`${fontPoppins.className} antialiased`}
       >
+        <Navbar />
+        <div className="container mx-auto px-4">
         {children}
+        </div>
       </body>
     </html>
   );
