@@ -28,7 +28,7 @@ const handleClick = () => {
               <Link href={"#layanan"}>Layanan</Link>
             </li>
             <li>
-              <Link href={"#proyek"}>Tentang</Link>
+              <Link href={"#proyek"}>Tentang absen</Link>
             </li>
             <li>
               <Link href={"#kontak"}>Kontak</Link>
