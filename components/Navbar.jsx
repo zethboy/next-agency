@@ -28,10 +28,10 @@ const handleClick = () => {
               <Link href={"#layanan"}>Layanan</Link>
             </li>
             <li>
-              <Link href={"#proyek"}>Tentang absen</Link>
+              <Link href={"#proyek"}>Tentang</Link>
             </li>
             <li>
-              <Link href={"#kontak"}>Kontak</Link>
+              <Link href={"#kontak"}>Kontak Kami</Link>
             </li>
           </ul>
           <div className='md:hidden block' onClick={() => handleClick()}>
