@@ -1,45 +1,49 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import { useState } from 'react'
-
 
 const Navbar = () => {
+  const [active, setActive] = useState(false)
 
-const [active, setActive] = useState(false);
-
-const handleClick = () => {
-  setActive(!active)
-}
+  const handleClick = () => {
+    setActive(!active)
+  }
 
   return (
-    <div className='navbar py-6 '>
+    <nav className="navbar py-6 bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="navbar-box flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <div className="logo">
-            <h1 className='text-3xl font-bold'>Lieur</h1>
+            <h1 className="text-3xl font-bold text-slate-800">Lieur</h1>
           </div>
-          <ul className={`menu flex items-center gap-12 md:static absolute left-1/2 -translate-x-1/2 ${active ? "top-24 opacity-100" : "top-20 opacity-0"} md:-translate-x-0 md:flex-row flex-col md:bg-transparent bg-slate-700 w-full md:w-auto md:py-0 py-10 text-white md:text-black transition-all md:opacity-100 md:transition-none`}>
+          <ul
+            className={`menu flex items-center gap-12 md:static absolute left-1/2 -translate-x-1/2 ${active ? 'top-24 opacity-100' : 'top-20 opacity-0 pointer-events-none'} md:translate-x-0 md:flex-row flex-col md:bg-transparent bg-slate-700 w-full md:w-auto md:py-0 py-10 text-white md:text-slate-800 transition-all duration-300 md:opacity-100 md:pointer-events-auto`}
+          >
             <li>
-              <Link href={"#beranda"}>Beranda</Link>
+              <Link href="#beranda" onClick={() => setActive(false)}>Beranda</Link>
             </li>
             <li>
-              <Link href={"#layanan"}>Service</Link>
+              <Link href="#layanan" onClick={() => setActive(false)}>Layanan</Link>
             </li>
             <li>
-              <Link href={"#proyek"}>Tentang Kami</Link>
+              <Link href="#proyek" onClick={() => setActive(false)}>Proyek</Link>
             </li>
             <li>
-              <Link href={"#kontak"}>Kontak</Link>
+              <Link href="#kontak" onClick={() => setActive(false)}>Kontak</Link>
             </li>
           </ul>
-          <div className='md:hidden block' onClick={() => handleClick()}>
-          <i className="ri-menu-3-line ri-2x font-bold"></i>
-          </div>
+          <button
+            className="md:hidden block text-slate-800 focus:outline-none"
+            onClick={handleClick}
+            aria-label="Toggle menu"
+            aria-expanded={active}
+          >
+            <i className="ri-menu-3-line ri-2x font-bold"></i>
+          </button>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
 
