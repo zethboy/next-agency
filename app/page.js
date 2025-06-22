@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUs';
 import Layanan from '../components/Layanan';
 import Proyek from '../components/Proyek';
 import FAQ from '../components/FAQ';
+import Contact from '../components/Contact';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <Layanan />
     <Proyek />
     <FAQ />
+    <Contact />
     {/* <h1>Homepage</h1> */}
    </div>
   );
