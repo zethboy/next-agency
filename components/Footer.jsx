@@ -2,18 +2,20 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-800 text-white py-8 mt-16">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="bg-slate-800 text-white py-10 mt-16 w-full">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
-          <span className="font-bold text-lg">Lieur Agency</span>
-          <span className="block text-slate-300 text-sm mt-1">Solusi Digital Kreatif &copy; {new Date().getFullYear()}</span>
+          <span className="font-bold text-2xl tracking-wide">Lieur Agency</span>
+          <span className="block text-slate-300 text-base mt-2">Solusi Digital Kreatif &copy; {new Date().getFullYear()}</span>
         </div>
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#beranda" className="hover:underline">Beranda</a>
-          <a href="#layanan" className="hover:underline">Layanan</a>
-          <a href="#proyek" className="hover:underline">Proyek</a>
-          <a href="#kontak" className="hover:underline">Kontak</a>
-        </div>
+        <nav className="flex flex-wrap gap-8 mt-4 md:mt-0 text-lg">
+          <a href="#beranda" className="hover:underline transition">Beranda</a>
+          <a href="#tentang-kami" className="hover:underline transition">Tentang Kami</a>
+          <a href="#layanan" className="hover:underline transition">Layanan</a>
+          <a href="#proyek" className="hover:underline transition">Proyek</a>
+          <a href="#faq" className="hover:underline transition">FAQ</a>
+          <a href="#kontak" className="hover:underline transition">Kontak</a>
+        </nav>
       </div>
     </footer>
   );

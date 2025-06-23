@@ -30,12 +30,12 @@ const projects = [
 
 const Proyek = () => {
   return (
-    <section id="proyek" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="proyek" className="py-20 bg-white w-full">
+      <div className="max-w-7xl mx-auto px-6">
         <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-12 text-center">Proyek Kami</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
-            <div key={idx} className="bg-slate-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col">
+            <div key={idx} className="bg-slate-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col text-lg">
               <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-semibold text-slate-800 mb-2">{project.title}</h4>
