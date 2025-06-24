@@ -30,10 +30,10 @@ const FAQ = () => {
 	return (
 		<section id="faq" className="py-20 bg-slate-50 w-full">
 			<div className="max-w-4xl mx-auto px-6">
-				<h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-10 text-center">
+				<h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center tracking-tight">
 					FAQ
 				</h3>
-				<div className="space-y-6 text-lg">
+				<div className="space-y-5 text-base">
 					{faqs.map((faq, idx) => (
 						<div
 							key={idx}

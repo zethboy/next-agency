@@ -18,11 +18,11 @@ const Contact = () => {
   return (
     <section id="kontak" className="py-20 bg-white w-full">
       <div className="max-w-2xl mx-auto px-6">
-        <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8 text-center">Kontak Kami</h3>
-        <p className="text-slate-600 mb-8 text-center text-lg">Silakan hubungi kami untuk konsultasi atau pertanyaan seputar layanan Lieur Agency.</p>
-        <form onSubmit={handleSubmit} className="bg-slate-50 rounded-xl shadow-md p-8 space-y-6">
+        <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center tracking-tight">Kontak Kami</h3>
+        <p className="text-slate-600 mb-8 text-center text-base">Silakan hubungi kami untuk konsultasi atau pertanyaan seputar layanan Lieur Agency.</p>
+        <form onSubmit={handleSubmit} className="bg-slate-50 rounded-xl shadow-md p-7 space-y-5">
           <div>
-            <label htmlFor="name" className="block mb-2 font-semibold text-slate-700 text-lg">Nama</label>
+            <label htmlFor="name" className="block mb-2 font-semibold text-slate-700 text-base">Nama</label>
             <input
               type="text"
               id="name"
@@ -30,11 +30,11 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-slate-400 outline-none text-lg"
+              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-slate-400 outline-none text-base"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block mb-2 font-semibold text-slate-700 text-lg">Email</label>
+            <label htmlFor="email" className="block mb-2 font-semibold text-slate-700 text-base">Email</label>
             <input
               type="email"
               id="email"
@@ -42,11 +42,11 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-slate-400 outline-none text-lg"
+              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-slate-400 outline-none text-base"
             />
           </div>
           <div>
-            <label htmlFor="message" className="block mb-2 font-semibold text-slate-700 text-lg">Pesan</label>
+            <label htmlFor="message" className="block mb-2 font-semibold text-slate-700 text-base">Pesan</label>
             <textarea
               id="message"
               name="message"
@@ -54,17 +54,17 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-slate-400 outline-none text-lg"
+              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-slate-400 outline-none text-base"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-slate-800 text-white py-3 rounded-lg font-semibold hover:bg-slate-700 transition text-lg"
+            className="w-full bg-slate-800 text-white py-3 rounded-lg font-semibold hover:bg-slate-700 transition text-base"
           >
             Kirim Pesan
           </button>
           {submitted && (
-            <div className="text-green-600 text-center font-semibold mt-4 text-lg">Pesan Anda telah terkirim!</div>
+            <div className="text-green-600 text-center font-semibold mt-4 text-base">Pesan Anda telah terkirim!</div>
           )}
         </form>
       </div>
