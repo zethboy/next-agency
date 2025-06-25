@@ -28,9 +28,9 @@ const FAQ = () => {
 	};
 
 	return (
-		<section id="faq" className="py-20 bg-slate-50 w-full">
+		<section id="faq" className="py-20 bg-[#FAF6F0] w-full">
 			<div className="max-w-4xl mx-auto px-6">
-				<h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center tracking-tight">
+				<h3 className="text-2xl md:text-3xl font-bold text-[#8B0000] mb-8 text-center tracking-tight">
 					FAQ
 				</h3>
 				<div className="space-y-5 text-base">
@@ -40,7 +40,7 @@ const FAQ = () => {
 							className="border rounded-xl bg-white shadow-sm overflow-hidden"
 						>
 							<button
-								className="w-full text-left px-6 py-5 font-semibold text-slate-800 flex justify-between items-center focus:outline-none"
+								className="w-full text-left px-6 py-5 font-semibold text-[#8B0000] flex justify-between items-center focus:outline-none"
 								onClick={() => toggleFAQ(idx)}
 								aria-expanded={openIndex === idx}
 							>
@@ -54,7 +54,7 @@ const FAQ = () => {
 								</span>
 							</button>
 							{openIndex === idx && (
-								<div className="px-6 pb-5 text-slate-600 animate-fade-in">
+								<div className="px-6 pb-5 text-[#5a5a5a] animate-fade-in">
 									{faq.answer}
 								</div>
 							)}
