@@ -2,8 +2,8 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="beranda" className="hero bg-[#FAF6F0] py-20 md:py-32 w-full">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    <section id="beranda" className="hero bg-[#FAF6F0] w-full min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 w-full">
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#8B0000] mb-5 leading-tight tracking-tight">
             Solusi Digital Kreatif untuk Bisnis Anda
