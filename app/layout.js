@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         className={`${fontPoppins.className} antialiased`}
       >
         <Navbar />
-        <div className="container mx-auto px-4">
+        <div className="w-full">
         {children}
         </div>
         <Footer />

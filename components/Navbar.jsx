@@ -20,31 +20,21 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="navbar py-4 bg-gradient-to-b from-[#FFF9E5] via-[#FAF6F0] to-[#FFF9E5] shadow-md sticky top-0 z-50 w-full overflow-hidden">
-      {/* Grain overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url('data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.08'/></svg>')`,
-          opacity: 0.5,
-          mixBlendMode: 'multiply',
-        }}
-        aria-hidden="true"
-      ></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+    <nav className="navbar py-4 bg-transparent text-white fixed top-0 left-0 w-full z-50">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between gap-4 relative">
           {/* Kiri: Logo */}
           <div className="logo flex-1 min-w-fit">
-            <h1 className="text-2xl md:text-3xl font-bold text-[#FAF6F0] tracking-wide">Giogi</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-white tracking-wide">Giogi</h1>
           </div>
           {/* Tengah: Navigasi dalam satu kotak, benar-benar di tengah absolute */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-            <div className="rounded-xl bg-[#FAF6F0] px-2 py-1 flex gap-2 shadow border border-[#FAF6F0]/30 items-center shadow-inner-xl">
+            <div className="rounded-xl bg-transparent px-2 py-1 flex gap-2 items-center">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-1 rounded-lg text-[#8B0000] font-semibold hover:bg-[#e2d8c6] transition text-base"
+                  className="px-3 py-1 rounded-lg text-white font-semibold hover:bg-white/10 transition text-base"
                 >
                   {item.label}
                 </Link>
@@ -54,16 +44,16 @@ const Navbar = () => {
           {/* Mobile nav */}
           <div className={`md:hidden flex-1 flex justify-center ${active ? '' : ''}`}>
             <div
-              className={`rounded-xl bg-[#FAF6F0] px-4 py-2 flex gap-2 shadow border border-[#FAF6F0]/30 items-center absolute left-1/2 -translate-x-1/2 ${
+              className={`rounded-xl bg-black/60 px-4 py-2 flex gap-2 items-center absolute left-1/2 -translate-x-1/2 ${
                 active ? 'top-20 opacity-100' : 'top-16 opacity-0 pointer-events-none'
-              } flex-col w-full py-8 transition-all duration-300 shadow-inner-md`}
+              } flex-col w-full py-8 transition-all duration-300`}
             >
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setActive(false)}
-                  className="px-3 py-1 rounded-lg text-[#8B0000] font-semibold hover:bg-[#e2d8c6] transition text-base"
+                  className="px-3 py-1 rounded-lg text-white font-semibold hover:bg-white/10 transition text-base"
                 >
                   {item.label}
                 </Link>
@@ -74,12 +64,12 @@ const Navbar = () => {
           <div className="flex-1 flex justify-end min-w-fit">
             <a
               href="#kontak"
-              className="hidden md:inline-block bg-[#FAF6F0] text-[#8B0000] font-bold px-6 py-2 rounded-lg shadow hover:bg-[#e2d8c6] border border-[#FAF6F0]/30 transition"
+              className="hidden md:inline-block bg-[#8B0000] text-white font-bold px-6 py-2 rounded-lg hover:bg-[#a83232] transition"
             >
               Contact
             </a>
             <button
-              className="md:hidden block text-[#FAF6F0] ml-4 focus:outline-none"
+              className="md:hidden block text-white ml-4 focus:outline-none"
               onClick={handleClick}
               aria-label="Toggle menu"
               aria-expanded={active}
