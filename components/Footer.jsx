@@ -2,8 +2,18 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#8B0000] text-white pt-12 pb-6 w-full mt-16">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-[#FAF6F0]/20 pb-8">
+    <footer className="bg-gradient-to-b from-[#FFF9E5] via-[#FAF6F0] to-[#FFF9E5] text-[#8B0000] pt-12 pb-6 w-full mt-16 relative overflow-hidden">
+      {/* Grain overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.08'/></svg>')`,
+          opacity: 0.5,
+          mixBlendMode: 'multiply',
+        }}
+        aria-hidden="true"
+      ></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-[#8B0000]/10 pb-8">
         {/* Brand & Social */}
         <div className="text-center md:text-left flex flex-col gap-3">
           <span className="font-bold text-2xl tracking-wide">Lieur Agency</span>
@@ -47,7 +57,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 mt-6 text-center text-[#FAF6F0] text-sm opacity-80">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-6 text-center text-[#8B0000] text-sm opacity-80">
         &copy; {new Date().getFullYear()} Lieur Agency. All rights reserved.
       </div>
     </footer>

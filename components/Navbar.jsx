@@ -20,8 +20,18 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="navbar py-4 bg-[#8B0000] shadow-md sticky top-0 z-50 w-full">
-      <div className="max-w-7xl mx-auto px-6">
+    <nav className="navbar py-4 bg-gradient-to-b from-[#FFF9E5] via-[#FAF6F0] to-[#FFF9E5] shadow-md sticky top-0 z-50 w-full overflow-hidden">
+      {/* Grain overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.08'/></svg>')`,
+          opacity: 0.5,
+          mixBlendMode: 'multiply',
+        }}
+        aria-hidden="true"
+      ></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between gap-4 relative">
           {/* Kiri: Logo */}
           <div className="logo flex-1 min-w-fit">
