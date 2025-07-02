@@ -28,38 +28,38 @@ const FAQ = () => {
 	};
 
 	return (
-		<section id="faq" className="py-20 bg-[#FAF6F0] w-full relative overflow-hidden">
+		<section id="faq" className="py-24 bg-[#18181b] w-full relative overflow-hidden text-white">
 			{/* Grain overlay */}
 			<div
 				className="pointer-events-none absolute inset-0 z-0"
 				style={{
-					backgroundImage: `url('data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.08'/></svg>')`,
-					opacity: 0.5,
-					mixBlendMode: 'multiply',
+					backgroundImage: `url('data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.12'/></svg>')`,
+					opacity: 0.7,
+					mixBlendMode: 'screen',
 				}}
 				aria-hidden="true"
 			></div>
 			<div className="relative z-10 max-w-4xl mx-auto px-6">
-				<span className="inline-block bg-[#8B0000] text-[#FAF6F0] px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-widest uppercase shadow">
+				<span className="inline-block bg-[#8B0000] text-white px-4 py-1 rounded-full text-xs font-bold mb-4 tracking-widest uppercase shadow">
 					FAQ
 				</span>
-				<h3 className="text-2xl md:text-3xl font-bold text-[#8B0000] mb-2 text-center tracking-tight">
+				<h3 className="text-3xl md:text-4xl font-extrabold text-white mb-3 text-center tracking-tight">
 					FAQ
 				</h3>
-				<div className="h-1 w-16 bg-[#8B0000]/30 rounded mb-8 mx-auto"></div>
-				<div className="space-y-5 text-base">
+				<div className="h-1 w-16 bg-[#8B0000]/60 rounded mb-8 mx-auto"></div>
+				<div className="space-y-6 text-base">
 					{faqs.map((faq, idx) => (
 						<div
 							key={idx}
-							className="border border-[#8B0000]/20 rounded-xl bg-white shadow-sm overflow-hidden"
+							className="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-lg overflow-hidden"
 						>
 							<button
-								className="w-full text-left px-6 py-5 font-semibold text-[#8B0000] flex justify-between items-center focus:outline-none"
+								className="w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none"
 								onClick={() => toggleFAQ(idx)}
 								aria-expanded={openIndex === idx}
 							>
 								<span className="flex items-center gap-2">
-									<i className="ri-question-line text-lg"></i> {faq.question}
+									<i className="ri-question-line text-[#FBBF24] text-xl"></i> {faq.question}
 								</span>
 								<span
 									className={`ml-4 transition-transform ${
@@ -70,8 +70,8 @@ const FAQ = () => {
 								</span>
 							</button>
 							{openIndex === idx && (
-								<div className="px-6 pb-5 text-[#5a5a5a] animate-fade-in flex items-center gap-2">
-									<i className="ri-chat-1-line text-lg text-[#8B0000]"></i> {faq.answer}
+								<div className="px-6 pb-5 text-white/80 animate-fade-in flex items-center gap-2">
+									<i className="ri-chat-1-line text-[#FBBF24] text-xl"></i> {faq.answer}
 								</div>
 							)}
 						</div>

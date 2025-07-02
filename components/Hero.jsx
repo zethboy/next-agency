@@ -30,18 +30,19 @@ const Hero = () => {
       </div>
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 w-full z-20">
         <div className="flex-1 text-center md:text-left animate-fade-in">
-          <span className="inline-block bg-[#8B0000] text-white px-4 py-1 rounded-full text-xs font-bold mb-4 tracking-widest uppercase shadow">
+          <span className="inline-block bg-[#8B0000] bg-opacity-80 backdrop-blur-md text-white px-4 py-1 rounded-full text-xs font-bold mb-4 tracking-widest uppercase shadow-lg border border-white/10">
+            <svg className="inline-block w-4 h-4 mr-2 text-yellow-400 align-text-bottom" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 01.894.553l2.382 4.825 5.327.774a1 1 0 01.554 1.707l-3.853 3.755.91 5.308a1 1 0 01-1.451 1.054L10 16.347l-4.773 2.503a1 1 0 01-1.451-1.054l.91-5.308-3.853-3.755a1 1 0 01.554-1.707l5.327-.774L9.106 2.553A1 1 0 0110 2z" /></svg>
             Agensi Digital Bandung
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 leading-tight tracking-tight">
-            Solusi Digital Kreatif untuk Bisnis Anda
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
+            Solusi Digital <span className="text-yellow-400">Kreatif</span> untuk <span className="text-[#8B0000]">Bisnis Anda</span>
           </h2>
-          <p className="text-base md:text-lg text-white/80 mb-7 max-w-xl mx-auto md:mx-0">
-            Kami adalah agensi digital yang siap membantu Anda membangun brand, website, dan strategi pemasaran digital yang efektif dan inovatif.
+          <p className="text-lg md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto md:mx-0 font-medium">
+            Kami adalah agensi digital <span className="text-yellow-400 font-semibold">Bandung</span> yang siap membantu Anda membangun brand, website, dan strategi pemasaran digital yang <span className="text-yellow-400 font-semibold">efektif</span> & <span className="text-[#8B0000] font-semibold">inovatif</span>.
           </p>
           <a
             href="#kontak"
-            className="inline-block bg-[#8B0000] text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-[#a83232] transition text-base mt-2"
+            className="inline-block bg-gradient-to-r from-[#8B0000] via-[#a83232] to-yellow-400 text-white px-10 py-4 rounded-full font-bold shadow-xl hover:scale-105 hover:from-yellow-400 hover:to-[#8B0000] hover:text-[#18181b] transition-all duration-300 text-lg mt-2 border border-white/10 backdrop-blur-md"
           >
             Konsultasi Gratis
           </a>
