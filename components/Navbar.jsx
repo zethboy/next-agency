@@ -29,12 +29,12 @@ const Navbar = () => {
           </div>
           {/* Tengah: Navigasi dalam satu kotak, benar-benar di tengah absolute */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-            <div className="rounded-xl bg-transparent px-2 py-1 flex gap-2 items-center">
+            <div className="rounded-xl bg-white/20 backdrop-blur-5xl px-2 py-1 flex gap-2 items-center border border-white/10 shadow-lg">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-1 rounded-lg text-white font-semibold hover:bg-white/10 transition text-base"
+                  className="px-3 py-1 rounded-lg text-white font-semibold hover:bg-white/20 transition text-base"
                 >
                   {item.label}
                 </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="flex-1 flex justify-end min-w-fit">
             <a
               href="#kontak"
-              className="hidden md:inline-block bg-[#8B0000] text-white font-bold px-6 py-2 rounded-lg hover:bg-[#a83232] transition"
+              className="hidden md:inline-block bg-white/20 backdrop-blur-5xl text-white font-bold px-6 py-2 rounded-lg hover:bg-[#a83232] transition"
             >
               Contact
             </a>
