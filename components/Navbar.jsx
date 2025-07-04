@@ -33,21 +33,21 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className={`navbar py-4 fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ${scrolled ? 'bg-white/70 backdrop-blur-2xl shadow-lg' : 'bg-transparent backdrop-blur-0 shadow-none'}`}> 
+    <nav className={`navbar py-4 fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ${scrolled ? 'bg-[#18181b]/90 backdrop-blur-2xl shadow-lg' : 'bg-transparent backdrop-blur-0 shadow-none'}`}> 
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between gap-4 relative">
           {/* Kiri: Logo */}
           <div className="logo flex-1 min-w-fit">
-            <h1 className={`text-2xl md:text-3xl font-bold tracking-wide transition-colors duration-500 ${scrolled ? 'text-[#18181b]' : 'text-white'}`}>Giogi</h1>
+            <h1 className={`text-2xl md:text-3xl font-bold tracking-wide transition-colors duration-500 ${scrolled ? 'text-yellow-400' : 'text-white'}`}>Giogi</h1>
           </div>
           {/* Tengah: Navigasi dalam satu kotak, benar-benar di tengah absolute */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-            <div className={`rounded-xl px-2 py-1 flex gap-2 items-center border border-white/10 shadow-lg transition-all duration-500 ${scrolled ? 'bg-white/70 backdrop-blur-2xl' : 'bg-white/20 backdrop-blur-5xl'}`}>
+            <div className={`rounded-xl px-2 py-1 flex gap-2 items-center border border-white/10 shadow-lg transition-all duration-500 ${scrolled ? 'bg-[#18181b]/90 backdrop-blur-2xl' : 'bg-white/20 backdrop-blur-5xl'}`}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-1 rounded-lg font-semibold hover:bg-white/20 transition text-base ${scrolled ? 'text-[#18181b]' : 'text-white'}`}
+                  className={`px-3 py-1 rounded-lg font-semibold hover:bg-white/10 transition text-base ${scrolled ? 'text-yellow-400' : 'text-white'}`}
                 >
                   {item.label}
                 </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
           <div className="flex-1 flex justify-end min-w-fit">
             <a
               href="#kontak"
-              className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-white text-black' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
+              className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-yellow-400 text-[#18181b] hover:bg-yellow-500' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
             >
               Login
             </a>
