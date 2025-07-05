@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="beranda" className="hero w-full min-h-screen flex items-center relative overflow-hidden bg-[#18181b] text-white pt-0 mt-0">
+    <section id="beranda" className="hero w-full min-h-screen flex items-center relative overflow-hidden bg-[#18181b] text-white pt-0 mt-0 scroll-smooth">
       {/* Video background dengan blur */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm"
