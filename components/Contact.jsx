@@ -16,7 +16,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontak" className="pt-24 pb-8 bg-[#18181b] w-full relative overflow-hidden text-white">
+    <section id="kontak" className="pt-24 pb-8 bg-[#18181b] w-full relative overflow-hidden text-white opacity-0 translate-y-8 transition-all duration-700 ease-out animate-fadein-contact">
+// Animasi fade-in dengan tailwind (custom keyframes di global css diperlukan)
       {/* Grain overlay */}
       <div
         className="pointer-events-none absolute inset-0 z-0"
