@@ -25,6 +25,11 @@ const projects = [
     title: 'Toko Online',
     image: '/assets/proyek5.webp',
     desc: 'E-commerce dengan fitur lengkap dan tampilan menarik.',
+  },
+  {
+    title: 'Aplikasi Booking Online',
+    image: '/assets/proyek6.webp',
+    desc: 'Sistem booking online modern untuk layanan bisnis dan reservasi.',
   }
 ];
 
