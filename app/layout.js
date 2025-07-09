@@ -1,8 +1,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import 'remixicon/fonts/remixicon.css';
+import ClientLayout from "./ClientLayout";
 
 const fontJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -21,11 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${fontJakarta.className} antialiased`}>
-        <Navbar />
-        <div className="w-full">
-          {children}
-        </div>
-        <Footer />
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
