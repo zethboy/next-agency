@@ -6,29 +6,31 @@ const Hero = () => {
       {/* Video background dengan overlay gelap */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="/assets/ofice-busy.mp4"
+        src="/assets/oficebusy.mp4"
         autoPlay
         loop
         muted
         playsInline
         aria-hidden="true"
+        preload="none"
+        poster="/assets/hero-poster.jpg"
       />
       {/* Overlay gelap di atas video */}
       <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none" aria-hidden="true"></div>
-      {/* Grain overlay */}
+      {/* Grain overlay (opacity lebih kecil) */}
       <div
         className="pointer-events-none absolute inset-0 z-10"
         style={{
           backgroundImage: `url('data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.12'/></svg>')`,
-          opacity: 0.7,
+          opacity: 0.25,
           mixBlendMode: 'screen',
         }}
         aria-hidden="true"
       ></div>
-      {/* Dekorasi blur merah */}
+      {/* Dekorasi blur merah (opacity lebih kecil) */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10">
-        <div className="w-72 h-72 bg-[#8B0000]/30 rounded-full absolute -top-24 -left-24 blur-2xl"></div>
-        <div className="w-96 h-96 bg-[#8B0000]/30 rounded-full absolute -bottom-32 -right-32 blur-2xl"></div>
+        <div className="w-72 h-72 bg-[#8B0000]/15 rounded-full absolute -top-24 -left-24 blur-2xl"></div>
+        <div className="w-96 h-96 bg-[#8B0000]/15 rounded-full absolute -bottom-32 -right-32 blur-2xl"></div>
       </div>
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 w-full z-20">
         <div className="flex-1 text-center md:text-left animate-fade-in">
