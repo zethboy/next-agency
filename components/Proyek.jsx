@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: 'Aplikasi Booking Online',
-    image: '/assets/proyek6.webp',
+    image: '/assets/proyek1.webp', // diganti agar pasti muncul
     desc: 'Sistem booking online modern untuk layanan bisnis dan reservasi.',
   }
 ];
