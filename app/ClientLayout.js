@@ -10,8 +10,8 @@ export default function ClientLayout({ children }) {
   useEffect(() => {
     setIsLoggedIn(localStorage.getItem("isLoggedIn") === "true");
   }, []);
-  // Jika di halaman login, jangan render Navbar/Footer
-  const hideNavFooter = pathname === "/login";
+  // Jika di halaman login, register, atau forgot, jangan render Navbar/Footer
+  const hideNavFooter = ["/login", "/register", "/forgot"].includes(pathname);
   return (
     <>
       {!isLoggedIn && !hideNavFooter && <Navbar />}
