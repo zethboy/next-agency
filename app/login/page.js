@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function Login() {
-
   const [form, setForm] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -58,23 +57,15 @@ export default function Login() {
             className="w-full px-4 py-3 rounded-lg border border-white/10 bg-black/30 text-white placeholder-white/60 focus:border-[#FBBF24] outline-none text-base"
           />
         </div>
-        {error && <div className="text-red-400 text-center font-semibold">{error}</div>}
-        <button type="submit" className="w-full bg-[#8B0000] text-white py-3 rounded-lg font-semibold hover:bg-[#a83232] transition text-base shadow flex items-center justify-center" disabled={loading}>
-          {loading ? (
-            <span className="flex items-center gap-2"><span className="loader border-2 border-t-2 border-t-yellow-400 border-white rounded-full w-5 h-5 animate-spin"></span> Loading...</span>
-          ) : (
-            'Login'
-          )}
+        {error && <div className="text-red-400 text-sm text-center font-semibold">{error}</div>}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-yellow-400 hover:bg-yellow-500 text-[#18181b] font-bold py-3 rounded-lg transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {loading ? 'Loading...' : 'Login'}
         </button>
       </form>
-      <style jsx>{`
-        .loader {
-          border-top-color: #FBBF24;
-          border-right-color: #fff;
-          border-bottom-color: #fff;
-          border-left-color: #fff;
-        }
-      `}</style>
     </div>
   );
 }

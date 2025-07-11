@@ -32,6 +32,13 @@ const Navbar = () => {
     { label: 'Kontak', href: '#kontak' },
   ]
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
+    }
+  }, []);
+
   return (
     <nav className={`navbar py-4 fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ${scrolled ? 'bg-[#18181b]/90 backdrop-blur-2xl shadow-lg' : 'bg-transparent backdrop-blur-0 shadow-none'}`}> 
       <div className="max-w-7xl mx-auto px-6">
@@ -73,14 +80,23 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          {/* Kanan: Contact */}
+          {/* Kanan: Login/Logout */}
           <div className="flex-1 flex justify-end min-w-fit">
-            <a
-              href="#kontak"
-              className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-yellow-400 text-[#18181b] hover:bg-yellow-500' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
-            >
-              Login
-            </a>
+            {!isLoggedIn ? (
+              <Link
+                href="/login"
+                className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-yellow-400 text-[#18181b] hover:bg-yellow-500' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
+              >
+                Login
+              </Link>
+            ) : (
+              <button
+                onClick={() => { localStorage.removeItem('isLoggedIn'); window.location.reload(); }}
+                className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-yellow-400 text-[#18181b] hover:bg-yellow-500' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
+              >
+                Logout
+              </button>
+            )}
             <button
               className="md:hidden block text-white ml-4 focus:outline-none"
               onClick={handleClick}
