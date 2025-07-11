@@ -3,9 +3,9 @@ import React from 'react';
 const Hero = () => {
   return (
     <section id="beranda" className="hero w-full min-h-screen flex items-center relative overflow-hidden bg-[#18181b] text-white pt-0 mt-0 scroll-smooth">
-      {/* Video background dengan blur */}
+      {/* Video background dengan overlay gelap */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm"
+        className="absolute inset-0 w-full h-full object-cover z-0"
         src="/assets/ofice-busy.mp4"
         autoPlay
         loop
@@ -13,6 +13,8 @@ const Hero = () => {
         playsInline
         aria-hidden="true"
       />
+      {/* Overlay gelap di atas video */}
+      <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none" aria-hidden="true"></div>
       {/* Grain overlay */}
       <div
         className="pointer-events-none absolute inset-0 z-10"
