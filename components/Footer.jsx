@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#18181b] via-[#18181b] to-[#8B0000] text-white pt-10 pb-6 w-full mt-0 relative overflow-hidden">
+    <footer className="py-10 bg-gradient-to-r from-[#18181b] via-[#8B0000]/60 to-[#18181b] w-full text-white animate-fadein-section">
       {/* Grain overlay */}
       <div
         className="pointer-events-none absolute inset-0 z-0"

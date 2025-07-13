@@ -23,7 +23,7 @@ const testimonials = [
 
 const Testimoni = () => {
   return (
-    <section id="testimoni" className="py-24 bg-[#18181b] w-full relative overflow-hidden text-white">
+    <section id="testimoni" className="py-24 bg-[#18181b] w-full relative overflow-hidden text-white animate-fadein-section">
       {/* Grain overlay */}
       <div
         className="pointer-events-none absolute inset-0 z-0"

@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <section id="tentang-kami" className="about-us py-24 bg-[#18181b] w-full relative overflow-hidden text-white">
+    <section id="tentang-kami" className="py-24 bg-[#18181b] w-full relative overflow-hidden text-white animate-fadein-section">
       {/* Grain overlay */}
       <div
         className="pointer-events-none absolute inset-0 z-0"

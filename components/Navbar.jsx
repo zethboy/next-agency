@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar py-4 fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ${scrolled ? 'bg-[#18181b]/90 backdrop-blur-2xl shadow-lg' : 'bg-transparent backdrop-blur-0 shadow-none'}`}> 
+    <nav className={`navbar py-4 fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ${scrolled ? 'bg-[#18181b]/95 backdrop-blur-sm shadow-md' : 'bg-transparent backdrop-blur-0 shadow-none'}`}> 
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between gap-4 relative">
           {/* Kiri: Logo */}
@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
           {/* Tengah: Navigasi dalam satu kotak, benar-benar di tengah absolute */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
-            <div className={`rounded-xl px-2 py-1 flex gap-2 items-center border border-white/10 shadow-lg transition-all duration-500 ${scrolled ? 'bg-[#18181b]/90 backdrop-blur-2xl' : 'bg-white/20 backdrop-blur-5xl'}`}>
+            <div className={`rounded-xl px-2 py-1 flex gap-2 items-center border border-white/10 shadow-md transition-all duration-500 ${scrolled ? 'bg-[#18181b]/95 backdrop-blur-sm' : 'bg-white/20 backdrop-blur-sm'}`}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
