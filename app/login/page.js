@@ -1,18 +1,19 @@
 'use client';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Login() {
   const [form, setForm] = useState({ username: '', password: '' });
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    setError('');
-    setSuccess('');
+    setErrorMsg('');
+    setSuccessMsg('');
   };
 
   const handleSubmit = (e) => {
@@ -23,7 +24,7 @@ export default function Login() {
         localStorage.setItem('isLoggedIn', 'true');
         router.push('/');
       } else {
-        setError('Username atau password salah!');
+        setErrorMsg('Username atau password salah!');
       }
       setLoading(false);
     }, 700);
@@ -31,7 +32,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#18181b] text-white px-2">
-      <form onSubmit={handleSubmit} className="bg-white/10 border border-white/10 rounded-2xl shadow-lg p-8 w-full max-w-sm space-y-6 backdrop-blur-md animate-fadein-section">
+      <form onSubmit={handleSubmit} className="bg-white/10 border border-white/10 rounded-2xl shadow-lg p-8 w-full max-w-sm space-y-6 backdrop-blur-md animate-fadein-section" aria-label="Form Login Admin">
         <h2 className="text-2xl font-bold text-center mb-4">Login Admin</h2>
         <div>
           <label htmlFor="username" className="block mb-2 font-semibold">Username</label>
@@ -61,21 +62,22 @@ export default function Login() {
             placeholder="Masukkan password"
           />
         </div>
-        {error && <div className="text-red-400 text-sm text-center font-semibold">{error}</div>}
-        {success && <div className="text-green-400 text-sm text-center font-semibold">{success}</div>}
+        {errorMsg && <div className="text-red-400 text-sm text-center font-semibold">{errorMsg}</div>}
+        {successMsg && <div className="text-green-400 text-sm text-center font-semibold">{successMsg}</div>}
         <button
           type="submit"
           disabled={loading}
+          aria-label="Tombol Masuk Admin"
           className="w-full bg-yellow-400 hover:bg-yellow-500 text-[#18181b] font-bold py-3 rounded-lg transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {loading ? 'Loading...' : 'Masuk'}
         </button>
         <div className="text-center mt-2">
-          <a href="/forgot" className="text-yellow-400 hover:underline text-sm">Lupa kata sandi?</a>
+          <Link href="/forgot" className="text-yellow-400 hover:underline text-sm">Lupa kata sandi?</Link>
         </div>
         <div className="text-center mt-2">
           <span className="text-white/70 text-sm">Belum punya akun? </span>
-          <a href="/register" className="text-yellow-400 hover:underline text-sm">Daftar</a>
+          <Link href="/register" className="text-yellow-400 hover:underline text-sm">Daftar</Link>
         </div>
       </form>
     </div>
