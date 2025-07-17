@@ -52,12 +52,12 @@ const Proyek = () => {
         <div className="h-1 w-16 bg-[#8B0000]/60 rounded mb-10 mx-auto"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
-            <div key={idx} className="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-all flex flex-col text-base">
-              <img src={project.image} alt={project.title} className="w-full h-56 object-cover rounded-t-2xl" />
+            <div key={idx} className="bg-white/10 border border-white/10 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-all flex flex-col text-base">
+              <img src={project.image} alt={project.title} className="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-lg font-semibold text-white mb-2">{project.title}</h4>
                 <p className="text-white/80 flex-1">{project.desc}</p>
-                <button className="mt-4 px-5 py-2 rounded-lg bg-[#8B0000] text-white font-semibold hover:bg-[#a83232] transition text-sm w-fit self-start shadow">Lihat Detail</button>
+                <button className="mt-4 px-5 py-2 rounded-lg bg-[#8B0000] text-white font-semibold hover:bg-[#a83232] transition text-sm w-fit self-start">Lihat Detail</button>
               </div>
             </div>
           ))}

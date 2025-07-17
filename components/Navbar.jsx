@@ -85,14 +85,14 @@ const Navbar = () => {
             {!isLoggedIn ? (
               <Link
                 href="/login"
-                className="hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 bg-yellow-400 text-[#18181b] hover:bg-yellow-500"
+                className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-yellow-400 text-[#18181b] hover:bg-yellow-500' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
               >
                 Login
               </Link>
             ) : (
               <button
                 onClick={() => { localStorage.removeItem('isLoggedIn'); window.location.reload(); }}
-                className="hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 bg-yellow-400 text-[#18181b] hover:bg-yellow-500"
+                className={`hidden md:inline-block font-bold px-6 py-2 rounded-lg transition-all duration-500 ${scrolled ? 'bg-yellow-400 text-[#18181b] hover:bg-yellow-500' : 'bg-white/20 backdrop-blur-5xl text-white hover:bg-white/40'}`}
               >
                 Logout
               </button>
