@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-1 rounded-lg font-semibold hover:bg-white/10 transition text-base ${scrolled ? 'text-yellow-400' : 'text-white'}`}
+                  className={`px-3 py-1 rounded-md font-semibold hover:bg-white/10 transition text-base ${scrolled ? 'text-yellow-400' : 'text-white'}`}
                 >
                   {item.label}
                 </Link>
