@@ -65,7 +65,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full px-4 py-3 rounded-md border border-white/10 bg-black/30 text-white placeholder-white/60 focus:border-[#FBBF24] outline-none text-base"
+              className="w-full px-4 py-3 rounded-lg border border-white/10 bg-black/30 text-white placeholder-white/60 focus:border-[#FBBF24] outline-none text-base"
             />
           </div>
           <button
