@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-4 relative">
           {/* Kiri: Logo */}
           <div className="logo flex-1 min-w-fit">
-            <h1 className={`text-2xl md:text-3xl font-bold tracking-wide transition-colors duration-500 ${scrolled ? 'text-yellow-400' : 'text-white'}`}>Giogi</h1>
+            <h1 className={`text-2xl md:text-3xl font-bold tracking-wide transition-colors duration-500 ${scrolled ? 'text-yellow-400' : 'text-white'}`}>Company</h1>
           </div>
           {/* Tengah: Navigasi dalam satu kotak, benar-benar di tengah absolute */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
