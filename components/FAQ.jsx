@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 
 const faqs = [
 	{
-		question: 'Apa saja layanan yang ditawarkan Lieur Agency?',
+		question: 'Apa saja layanan yang ditawarkan Giogi Agency?',
 		answer: 'Kami menawarkan pembuatan website, branding & desain, digital marketing, dan UI/UX design.',
 	},
 	{
-		question: 'Bagaimana proses kerja dengan Lieur Agency?',
+		question: 'Bagaimana proses kerja dengan Giogi Agency?',
 		answer: 'Kami memulai dengan konsultasi, dilanjutkan dengan perencanaan, eksekusi, dan revisi sesuai kebutuhan klien.',
 	},
 	{

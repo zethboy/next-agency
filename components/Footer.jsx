@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-6 text-center text-white/60 text-sm opacity-80" aria-label="Copyright">
-        &copy; {new Date().getFullYear()} Lieur Agency. All rights reserved.
+        &copy; {new Date().getFullYear()} Giogi Agency. All rights reserved.
       </div>
     </footer>
   );
